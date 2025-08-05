@@ -7,8 +7,6 @@
 
 Newfiles is an intelligent file monitoring application that automatically generates content for newly created files using AI. Say goodbye to empty files and hello to AI-powered productivity!
 
-https://github.com/Heron4gf/Newfiles/assets/12345678/placeholder-demo.gif
-
 ## 🌟 Why Newfiles?
 
 Tired of staring at blank files? Newfiles solves this by automatically filling your new files with relevant content based on their names and extensions. Whether you're creating a Python script, a Markdown document, or even requesting an image, Newfiles has you covered with AI-generated content.
