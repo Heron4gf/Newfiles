@@ -1,37 +1,49 @@
-# Newfiles
+# Newfiles 📄✨
 
-Newfiles is a Python application that monitors a directory for newly created files and automatically generates content for them using OpenAI's API. It supports different file types with customizable prompts and models.
+[![License](https://img.shields.io/github/license/Heron4gf/Newfiles)](https://github.com/Heron4gf/Newfiles/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Heron4gf/Newfiles)](https://github.com/Heron4gf/Newfiles/commits/main)
+![Repo Top Language](https://img.shields.io/github/languages/top/Heron4gf/Newfiles)
+[![Language Count](https://img.shields.io/github/languages/count/Heron4gf/Newfiles)](https://github.com/Heron4gf/Newfiles)
 
-## Features
+Newfiles is an intelligent file monitoring application that automatically generates content for newly created files using AI. Say goodbye to empty files and hello to AI-powered productivity!
 
-- Monitors a directory for new file creations
-- Generates content automatically based on file extension
-- Supports both static and dynamic prompts
-- Configurable models and settings per file extension
-- Delay mechanism to prevent conflicts with other programs
-- Subdirectory monitoring option
+https://github.com/Heron4gf/Newfiles/assets/12345678/placeholder-demo.gif
 
-## Installation
+## 🌟 Why Newfiles?
+
+Tired of staring at blank files? Newfiles solves this by automatically filling your new files with relevant content based on their names and extensions. Whether you're creating a Python script, a Markdown document, or even requesting an image, Newfiles has you covered with AI-generated content.
+
+## 🚀 Key Features
+
+- **Smart File Monitoring**: Automatically detects new files in your specified directory
+- **AI-Powered Content Generation**: Uses OpenAI's advanced models to create relevant content
+- **Multi-Format Support**: Works with text files (.txt, .md, .py, .java) and images (.png, .jpg)
+- **Customizable Prompts**: Tailor the AI's behavior with your own prompt templates
+- **Flexible Configuration**: Adjust settings for different file types and monitoring preferences
+- **Beautiful GUI**: Modern interface built with CustomTkinter for easy configuration
+- **Background Service**: Run continuously in the background as a Windows service
+- **Dynamic Prompts**: For text files, the AI can reference existing files in the same directory
+
+## 📦 Installation
 
 1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd newfiles
+   ```bash
+   git clone https://github.com/Heron4gf/Newfiles.git
+   cd Newfiles
    ```
 
 2. Install the required dependencies:
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 
 3. Set up your OpenAI API key:
-   - Rename `.env.example` to `.env`
-   - Add your OpenAI API key:
-     ```
-     OPENAI_API_KEY=your_api_key_here
-     ```
+   Create a `.env` file in the root directory with your OpenAI API key:
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   ```
 
-## Configuration
+## ⚙️ Configuration
 
 The application can be configured through `config/config.json`:
 
@@ -42,11 +54,11 @@ The application can be configured through `config/config.json`:
 - `default_image_prompt_file`: Default prompt file for image files
 - `extension_settings`: Extension-specific settings including model and prompt file
 
-## Usage
+## 🖥️ Usage
 
 ### Command Line Version
 Run the application with:
-```
+```bash
 python main.py
 ```
 
@@ -56,7 +68,7 @@ Optional arguments:
 
 ### GUI Version
 Run the GUI application with:
-```
+```bash
 python newfiles_gui.py
 ```
 
@@ -66,25 +78,23 @@ The GUI version provides a user-friendly interface for:
 - Starting and stopping the monitoring service
 - Viewing application logs
 
-The new GUI version uses CustomTkinter for a more modern and visually appealing interface.
-
 ### Windows Service
 For continuous background operation, you can run the application as a Windows service:
-```
+```bash
 python windows_service.py
 ```
 
-## Creating an Installer
+## 🛠️ Creating an Installer
 
 To create a standalone Windows installer for the GUI application:
 
 1. Install PyInstaller:
-   ```
+   ```bash
    pip install pyinstaller
    ```
 
 2. Create the executable:
-   ```
+   ```bash
    pyinstaller newfiles.spec
    ```
 
@@ -94,7 +104,7 @@ To create a standalone Windows installer for the GUI application:
    - Configure desktop and start menu shortcuts
    - Compile the installer
 
-## How it works
+## 🧠 How It Works
 
 1. The application monitors the configured directory for new file creations
 2. When a new file is detected, it waits for the configured delay
@@ -102,17 +112,25 @@ To create a standalone Windows installer for the GUI application:
 4. For text files, it can use dynamic prompts by referencing other files of the same type in the directory
 5. It generates content using OpenAI's API and writes it to the new file
 
-## Supported File Types
+## 📝 Supported File Types
 
 - Text files (.txt, .md, .py, .java, etc.)
 - Image files (.png, .jpg, .jpeg)
 
-## Customization
+## 🎨 Customization
 
 - Modify prompts in the `prompts/` directory
 - Adjust extension settings in `config/config.json`
 - Change monitoring settings in `config/config.json`
 
-## Logging
+## 📋 Logging
 
 Application logs are stored in `logs/newfiles.log`.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
