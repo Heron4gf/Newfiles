@@ -1,0 +1,29 @@
+{
+  "monitored_directory": "C:/Users/heron/OneDrive/Desktop",
+  "delay": 0.5,
+  "monitor_subdirectories": true,
+  "default_text_prompt_file": "prompts/default_text.md",
+  "default_image_prompt_file": "prompts/default_image.md",
+  "extension_settings": {
+    "png": {
+      "model": "dall-e-3",
+      "prompt_file": "prompts/image.md"
+    },
+    "txt": {
+      "model": "gpt-4.1-nano",
+      "prompt_file": "prompts/default_text.md"
+    },
+    "md": {
+      "model": "gpt-4.1-nano",
+      "prompt_file": "prompts/default_text.md"
+    },
+    "py": {
+      "model": "gpt-4.1-nano",
+      "prompt_file": "prompts/default_text.md"
+    },
+    "java": {
+      "model": "gpt-4.1-nano",
+      "prompt_file": "prompts/default_text.md"
+    }
+  }
+}
