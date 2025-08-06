@@ -16,16 +16,12 @@ class NewFileHandler(FileSystemEventHandler):
         self.processor = processor
     
     def on_created(self, event):
-        """Handle file creation events"""
-        if not event.is_directory:
-            # Apply delay before processing
-            time.sleep(self.settings.delay)
-            
-            # Process the new file
-            self.processor.process_new_file(event.src_path)
+        """Handle file creation events - now ignored as per new requirements"""
+        # Do nothing on file creation - we only process on rename
+        pass
     
     def on_moved(self, event):
-        """Handle file rename/move events"""
+        """Handle file rename/move events - generate content for empty files"""
         if not event.is_directory:
             # Apply delay before processing
             time.sleep(self.settings.delay)
