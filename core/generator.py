@@ -67,7 +67,7 @@ class ContentGenerator:
     
     def generate_image_content(self, filename: str, prompt_file: str) -> bytes:
         """
-        Generate image content using OpenAI DALL-E
+        Generate image content using OpenAI GPT-Image-1
         
         Args:
             filename: Name of the file being created
@@ -84,17 +84,16 @@ class ContentGenerator:
             # Format the prompt with filename
             prompt = prompt_template.format(filename=filename)
             
-            # Generate image using DALL-E
-            response = self.client.images.generate(
-                model="dall-e-3",
+            # Generate image using GPT-Image-1
+            img = self.client.images.generate(
+                model="gpt-image-1",
                 prompt=prompt,
                 n=1,
-                size="1024x1024",
-                response_format="b64_json"
+                size="1024x1024"
             )
             
             # Decode the base64 image
-            image_bytes = base64.b64decode(response.data[0].b64_json)
+            image_bytes = base64.b64decode(img.data[0].b64_json)
             return image_bytes
             
         except Exception as e:
